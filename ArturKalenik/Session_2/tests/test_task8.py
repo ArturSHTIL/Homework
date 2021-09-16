@@ -1,4 +1,4 @@
-from Session1 import task8
+from Session_2 import task8
 
 
 def test_multiplication_table_positive():

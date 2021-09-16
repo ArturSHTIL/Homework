@@ -1,4 +1,4 @@
-from Session1 import task7
+from Session_2 import task7
 import pytest
 
 
