@@ -1,0 +1,3 @@
+[*] Execution time: 1.322390079498291 seconds.
+[*] Execution time: 1.3726296424865723 seconds.
+[*] Execution time: 1.475367546081543 seconds.
