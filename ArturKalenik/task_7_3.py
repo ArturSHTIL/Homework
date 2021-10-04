@@ -6,6 +6,7 @@ def benchmark_time(func):
     """
     Implement decorator with context manager support for writing execution time to log-file.
     """
+
     def wrapper(*args, **kwargs):
         start = time.time()
         return_value = func(*args, **kwargs)

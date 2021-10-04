@@ -1,5 +1,3 @@
-
-
 class OpenFile(object):
     """
     Implement class-based context manager for opening and working with file,

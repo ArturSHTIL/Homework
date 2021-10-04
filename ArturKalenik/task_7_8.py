@@ -1,6 +1,3 @@
-from _collections_abc import Iterable
-
-
 class MySquareIterator:
     """
     Implement your custom iterator class called MySquareIterator

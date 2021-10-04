@@ -9,11 +9,17 @@ Implement class-based context manager for opening and working with file, includi
 ### Task 7.2
 Implement context manager for opening and working with file, including handling exceptions with @contextmanager decorator.
 
+[Solution 7.2](./task_7_2.py)
+
 ### Task 7.3
 Implement decorator with context manager support for writing execution time to log-file. See contextlib module.
 
+[Solution 7.3](./task_7_3.py)
+
 ### Task 7.4
 Implement decorator for supressing exceptions. If exception not occure write log to console.
+
+[Solution 7.4](./task_7_4.py)
 
 ### Task 7.5
 Implement function for check that number is even and is greater than 2. Throw different exceptions for this errors. Custom exceptions must be derived from custom base exception(not Base Exception class).
@@ -72,6 +78,8 @@ for item in itr:
 
 ```
 
+[Solution 7.8](./task_7_8.py)
+
 ### Task 7.9
 Implement an iterator class EvenRange, which accepts start and end of the interval as an init arguments and gives only even numbers during iteration.
 If user tries to iterate after it gave all possible numbers `Out of numbers!` should be printed.  
@@ -93,6 +101,8 @@ for number in er2:
 >>> 4 6 8 10 12 "Out of numbers!"
 ```
 
+[Solution 7.9](./task_7_9.py)
+
 ### Task 7.10
 Implement a generator which will generate odd numbers endlessly.
 Example:
@@ -102,6 +112,8 @@ while True:
     print(next(gen))
 >>> 1 3 5 7 ... 128736187263 128736187265 ...
 ```
+
+[Solution 7.10](./task_7_10.py)
 
 ### Task 7.11
 Implement a generator which will geterate [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) endlessly.
@@ -113,6 +125,7 @@ while True:
 >>> 1 1 2 3 5 8 13 ...
 ```
 
+[Solution 7.11](./task_7_11.py)
 
 ### Materials
 * [Exceptions](https://realpython.com/python-exceptions/)
