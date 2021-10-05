@@ -37,7 +37,7 @@ def check_an_even_number(number: int):
 
     if not isinstance(number, int):
         raise ValueTypeError('Invalid literal for int() with base 10')
-    elif number < 2:
+    elif number <= 2:
         raise ValueTooSmallError('Number less than two is called')
     elif number % 2 != 0:
         raise ValueOddError('Odd number is called')

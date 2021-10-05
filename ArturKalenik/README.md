@@ -24,8 +24,12 @@ Implement decorator for supressing exceptions. If exception not occure write log
 ### Task 7.5
 Implement function for check that number is even and is greater than 2. Throw different exceptions for this errors. Custom exceptions must be derived from custom base exception(not Base Exception class).
 
+[Solution 7.5](./task_7_5.py)
+
 ### Task 7.6
 Create console program for proving Goldbach's conjecture. Program accepts number for input and print result. For pressing 'q' program succesfully close. Use function from Task 5.5 for validating input, handle all exceptions and print user friendly output.
+
+[Solution 7.6](./task_7_6.py)
 
 ### Task 7.7
 Implement your custom collection called MyNumberCollection. It should be able to contain only numbers. It should NOT inherit any other collections.
