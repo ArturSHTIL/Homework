@@ -35,7 +35,7 @@ def parse_arguments(args, logger_):
     logger_.info('Starting the process getting argparse arguments')
     parser = argparse.ArgumentParser(description="Pure Python command-line RSS reader.")
     parser.add_argument("source", help='RSS URL', type=str)
-    parser.add_argument('--version', action='version', version='%(prog)s 1.1')
+    parser.add_argument('--version', action='version', version='%(prog)s 1.0.2')
     parser.add_argument("--json", help='Print result as JSON in stdout', action="store_true")
     parser.add_argument("--verbose", help='Outputs verbose status messages', action="store_true")
     parser.add_argument("--limit", help=f'Limit news topics if this parameter provided', type=int, default=None)
@@ -208,7 +208,7 @@ class RssItem:
         self.description = description
 
 
-if __name__ == '__main__':
+def main():
     logging.basicConfig(handlers=[logging.StreamHandler()])
     logger = logging.getLogger('rss_reader')
     source_url_, json_, verbose_, limit_ = parse_arguments(sys.argv[1:], logger)
@@ -220,3 +220,7 @@ if __name__ == '__main__':
         print(rss_news.get_rss_as_json())
     else:
         print(rss_news.get_rss_as_text())
+
+
+if __name__ == '__main__':
+    main()

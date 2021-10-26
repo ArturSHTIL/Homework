@@ -16,19 +16,17 @@ RSS parser has the following features:
 * limit to a number of items to view (`--limit` parameter)
 
 ## Setup instructions
-To install dependencies and start using RSS reader please following these steps:
-1. Create a virtual environment - `python -m venv my_venv`
-2. Activate the virtual environment from step 2:
-  - Windows - `.\my_venv\Scripts\activate.bat` or `.\my_venv\Scripts\activate.ps1` depending on the console you are using
-  - Linux - `source my_venv/Scripts/activate`
-3. Install dependencies - `pip install -r requirements.txt`
-4. Now you can run the RSS parser using the dedicated virtual environment created on step 1 (make sure it was activated) - `python .\rss_reader.py https://www.theguardian.com/uk/rss --limit 2`
+To install RSS parser you need to install a package from `dist` directory using `pip`:
+* `pip install .\dist\rss_reader-1.0.2-py3-none-any.whl`
+
 
 ## Usage
-To run RSS Reader please use `rss_reader.py`:
+Please follow setup instructions above before using RSS parser.
+
+To run RSS Reader please use `rss_reader`:
 ```
-python .\rss_reader.py -h
-usage: rss_reader.py [-h] [--version] [--json] [--verbose] [--limit LIMIT] source
+rss_reader -h
+usage: rss_reader [-h] [--version] [--json] [--verbose] [--limit LIMIT] source
 
 Pure Python command-line RSS reader.
 
@@ -83,11 +81,26 @@ The following information from RSS is shown to the user:
 * description - more detailed description of an RSS feed or an RSS article
 
 ## Development setup
+### Development setup instructions
+To install dependencies and start working on RSS reader please follow these steps:
+1. Create a virtual environment - `python -m venv my_venv`
+2. Activate the virtual environment from step 2:
+  - Windows - `.\my_venv\Scripts\activate.bat` or `.\my_venv\Scripts\activate.ps1` depending on the console you are using
+  - Linux - `source my_venv/Scripts/activate`
+3. Install dependencies - `pip install -r requirements.txt`
+4. Now you can run the RSS parser using the dedicated virtual environment created on step 1 (make sure it was activated) - `python .\rss_reader.py https://www.theguardian.com/uk/rss --limit 2`
+
 ### How to run tests
 To run tests please use the following command in the terminal in root directory of the project:
 ```
 python -m unittest discover tests
 ```
+
+### Building package
+To build the package please use the following commands:
+1. Create a virtual environment (if not exists) and activate it
+2. Build the package - `py -m build`
+3. Now `dist` directory contains your package
 
 ### Dependencies
 The following libraries are used during development (please see [requirements.txt](requirements.txt) for more details):
@@ -95,5 +108,4 @@ The following libraries are used during development (please see [requirements.tx
 * `lxml>=4.6.3`
 * `requests>=2.26.0`
 * `setuptools>=56.0.0`
-* `wheel>=0.37.0`
-* `twine>=3.4.2`
+* `build>=0.7.0`
