@@ -49,7 +49,7 @@ Command line parameters:
 
 Example:
 ```
-python .\rss_reader.py https://www.theguardian.com/uk/rss --limit 2
+rss_reader https://www.theguardian.com/uk/rss --limit 2
 
 Rss feed title: The Guardian
 Rss feed link: https://www.theguardian.com/uk
