@@ -4,3 +4,4 @@ requests>=2.26.0
 setuptools>=56.0.0
 build>=0.7.0
 python-dateutil
+xhtml2pdf

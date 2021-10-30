@@ -5,11 +5,12 @@ REQUIRED = ['beautifulsoup4>=4.10.0',
             'requests>=2.26.0',
             'setuptools>=56.0.0',
             'build>=0.7.0',
-            'python-dateutil']
+            'python-dateutil',
+            'xhtml2pdf']
 
 setup(
     name='rss_reader',
-    version='1.0.3',
+    version='1.0.4',
     packages=find_packages(include=['rss_reader', 'rss_reader.*']),
     url='https://github.com/ArturSHTIL/Homework',
     description='Web Rss Parser',

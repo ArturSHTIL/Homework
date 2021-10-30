@@ -43,12 +43,14 @@ def parse_arguments(args, logger_):
     parser.add_argument("source", help='RSS URL', type=str, nargs="?", default=None)
     parser.add_argument('--version', action='version', version='%(prog)s 1.0.2')
     parser.add_argument("--json", help='Print result as JSON in stdout', action="store_true")
+    parser.add_argument("--to-html", help='Print result as HTML in stdout', action="store_true")
+    parser.add_argument("--to-pdf", help='Save RSS as pdf in current directory', action="store_true")
     parser.add_argument("--verbose", help='Outputs verbose status messages', action="store_true")
     parser.add_argument("--limit", help='Limit news topics if this parameter provided', type=int, default=None)
     parser.add_argument("--date", help='', type=_handle_date, default=None)
     args = parser.parse_args(args)
     logger_.info('Finishing the process getting argparse arguments')
-    return RssParserConfiguration(args.source, args.json, args.verbose, args.limit, args.date)
+    return RssParserConfiguration(args.source, args.json, args.to_html, args.to_pdf, args.verbose, args.limit, args.date)
 
 
 def extract_text(tag: bs4.Tag) -> str:
