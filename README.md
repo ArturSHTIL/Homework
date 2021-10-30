@@ -25,9 +25,6 @@ Please follow setup instructions above before using RSS parser.
 
 To run RSS Reader please use `rss_reader`:
 ```
-rss_reader -h
-usage: rss_reader [-h] [--version] [--json] [--verbose] [--limit LIMIT] source
-
 Pure Python command-line RSS reader.
 
 positional arguments:
@@ -37,8 +34,11 @@ optional arguments:
   -h, --help     show this help message and exit
   --version      show program's version number and exit
   --json         Print result as JSON in stdout
+  --to-html      Print result as HTML in stdout
+  --to-pdf       Save RSS as pdf in current directory
   --verbose      Outputs verbose status messages
   --limit LIMIT  Limit news topics if this parameter provided
+  --date DATE    
 ```
 Command line parameters:
 * `source` (required) - URL link to RSS feed
@@ -46,6 +46,9 @@ Command line parameters:
 * `--json` - format RSS feed as JSON string if specified. Simple text representation is used by default 
 * `--version` - print the version and exits the program
 * `--verbose` - show all logs in the console while the application is running
+* `--date` - show the articles by date from local storage
+* `--to-pdf` - export RSS feed to PDF
+* `--to-html` - format RSS feed as HTML
 
 Example:
 ```
